@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
-import HookCounterOne from './components/HookCounterOne';
+import IntervalHookCounter from './components/IntervalHookCounter';
+//import IntervalClassCounter from './components/IntervalClassCounter';
+//import HookMouse from './components/HookMouse';
+//import MouseContainer from './components/MouseContainer';
+//import ClassMouse from './components/ClassMouse';
+//import HookCounterOne from './components/HookCounterOne';
 //import ClassCounterOne from './components/ClassCounterOne';
 //import HookCounterFour from './components/HookCounterFour';
 //import HookCounterTwo from './HookCounterTwo';
@@ -13,7 +18,7 @@ import HookCounterOne from './components/HookCounterOne';
 function App() {
   return (
     <div className="App">
-     <HookCounterOne />
+      <IntervalHookCounter />
     </div>
   );
 }
