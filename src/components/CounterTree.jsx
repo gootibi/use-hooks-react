@@ -15,8 +15,9 @@ const reducer = (state, action) => {
     }
 }
 
-function CounterOne() {
+function CounterTree() {
     const [count, dispatch] = useReducer(reducer, initialState)
+    const [countTwo, dispatchTwo] = useReducer(reducer, initialState)
 
     return (
         <div>
@@ -24,8 +25,14 @@ function CounterOne() {
             <button type="button" onClick={() => dispatch('increment')}>Increment</button>
             <button type="button" onClick={() => dispatch('decrement')}>Decrement</button>
             <button type="button" onClick={() => dispatch('reset')}>Reset</button>
+            <div>
+                <div>CountTwo - {countTwo}</div>
+                <button type="button" onClick={() => dispatchTwo('increment')}>Increment</button>
+                <button type="button" onClick={() => dispatchTwo('decrement')}>Decrement</button>
+                <button type="button" onClick={() => dispatchTwo('reset')}>Reset</button>
+            </div>
         </div>
     )
 }
 
-export default CounterOne
+export default CounterTree
