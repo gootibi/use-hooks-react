@@ -1,7 +1,12 @@
 import './App.css';
-import DataFetchinTwo from './components/data-fetching/DataFetchinTwo';
+import HookTimer from './components/useref-hook/HookTimer';
+//import ClassTimer from './components/useref-hook/ClassTimer';
+//import FocusInput from './components/useref-hook/FocusInput';
+//import Counter from './components/usememo-hook/Counter';
+//import Post from './components/postreducer-hook/Post';
+//import ParentComponent from './components/usecallback_component/ParentComponent';
 //import DataFetchingOne from './components/data-fetching/DataFetchingOne';
-
+//import DataFetchinTwo from './components/data-fetching/DataFetchinTwo';
 //import React, { useReducer } from 'react';
 //import CounterOne from './components/CounterOne';
 //import CounterTree from './components/CounterTree';
@@ -71,7 +76,7 @@ function App() {
       </div>
         </CountContext.Provider> */}
 
-    <DataFetchinTwo />
+   <HookTimer />
 
     </div>
   );

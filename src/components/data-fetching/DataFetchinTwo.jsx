@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const initialState = {
     loading: true,
-    error: '',
+    error: false,
     post: {}
 }
 
@@ -13,13 +13,13 @@ const reducer = (state, action) => {
             return {
                 loading: false,
                 post: action.payload,
-                error: ''
+                error: false
             }
         case 'FETCH_ERROR':
             return {
                 loading: false,
                 post: {},
-                error: 'Something is wrong!'
+                error: true
             }
         default:
             return state
@@ -45,7 +45,7 @@ function DataFetchinTwo() {
     return (
         <div>
             {state.loading ? 'Loading' : state.post.title}
-            {state.error ? state.error : null}
+            {state.error ? 'Something is wrong...' : null}
         </div>
     )
 }

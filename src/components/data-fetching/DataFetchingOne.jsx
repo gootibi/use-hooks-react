@@ -3,7 +3,7 @@ import axios from 'axios'
 
 function DataFetchingOne() {
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState('')
+    const [error, setError] = useState(false)
     const [post, setPost] = useState({})
 
     useEffect(() => {
@@ -11,7 +11,7 @@ function DataFetchingOne() {
             .get('https://jsonplaceholder.typicode.com/posts/1')
             .then(response => {
                 setLoading(false)
-                setError('')
+                setError(false)
                 setPost(response.data)
             })
             .catch(err => {
@@ -25,7 +25,7 @@ function DataFetchingOne() {
     return (
         <div>
             {loading ? 'Loading' : post.title}
-            {error ? error : null}
+            {error ? 'Somathing is wrong' : null}
         </div>
     )
 }
